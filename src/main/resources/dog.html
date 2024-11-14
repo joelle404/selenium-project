@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Dogs</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+
+</head>
+<body>
+  <h1>About Dogs</h1>
+  <p>Dogs are loyal and social animals, often considered "man's best friend." They have been domesticated for thousands of years and are known for their companionship and protective instincts.</p>
+  <p>Dogs communicate using a variety of sounds, including barks, growls, and whines. They are highly trainable and are used in various roles, such as hunting, herding, and providing emotional support.</p>
+  <p>As social animals, dogs thrive in environments where they receive plenty of attention and exercise.</p>
+
+  <div class="animal-grid">
+    <!-- Animal images grid -->
+    <div>
+      <img src="images/dog.jpg" alt="Donkey 1" id="dog1" onclick="incrementCounter('dog1')">
+    </div>
+    <div>
+      <img src="images/black-cat.jpg" alt="Dog" onclick="playSoundAnd('cat')">
+    </div>
+    <div>
+      <img src="images/donkey.jpg" alt="Cat" onclick="playSoundAnd('donkey')">
+    </div>
+    <div>
+      <img src="images/dog.jpg" alt="Donkey 2" id="dog2" onclick="incrementCounter('dog2')">
+    </div>
+    <div>
+      <img src="images/bird.jpg" id="bird" alt="Bird" onclick="playSoundAnd('bird')">
+    </div>
+    <div>
+      <img src="images/capybara.jpg" alt="Capybara" onclick="playSoundAnd('capybara')">
+    </div>
+  </div>
+
+  <p id="counter">dogs clicked: 0/2</p>
+
+  <!-- Sound element for claps -->
+  <audio id="clap-sound" preload="auto">
+    <source src="sounds/clap.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="animal-sound"></audio>
+  <audio id="clap-sound"></audio>
+  <a href="index.html">Back to Main Page</a>
+</body>
+</html>

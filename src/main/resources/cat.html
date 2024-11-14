@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Cats</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>About Cats</h1>
+  <p>Cats are small, carnivorous mammals that are often kept as pets. They are known for their agility, independence, and playful behavior.</p>
+  <p>Cats have been associated with humans for thousands of years and are often appreciated for their ability to hunt rodents.</p>
+  <p>Cats communicate with humans and other animals using various sounds, including meows, purrs, and hisses.</p>
+  <div class="animal-grid">
+    <!-- Animal images grid -->
+    <div>
+      <img src="images/black-cat.jpg" alt="Donkey 1" id="cat1" onclick="incrementCounter('cat1')">
+    </div>
+    <div>
+      <img src="images/dog.jpg" alt="Dog" onclick="playSoundAnd('dog')">
+    </div>
+    <div>
+      <img src="images/donkey.jpg" alt="Cat" onclick="playSoundAnd('donkey')">
+    </div>
+    <div>
+      <img src="images/black-cat.jpg" alt="Donkey 2" id="cat2" onclick="incrementCounter('cat2')">
+    </div>
+    <div>
+      <img src="images/bird.jpg" id="bird" alt="Bird" onclick="playSoundAnd('bird')">
+    </div>
+    <div>
+      <img src="images/capybara.jpg" alt="Capybara" onclick="playSoundAnd('capybara')">
+    </div>
+  </div>
+
+  <p id="counter">cats clicked: 0/2</p>
+
+  <!-- Sound element for claps -->
+  <audio id="clap-sound" preload="auto">
+    <source src="sounds/clap.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="animal-sound"></audio>
+  <audio id="clap-sound"></audio>
+
+  <a href="index.html">Back to Main Page</a>
+</body>
+</html>

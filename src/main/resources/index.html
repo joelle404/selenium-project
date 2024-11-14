@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal Sounds</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Welcome, <span id="userName"></span>!</h1>
+
+  <!-- Form to accept user name -->
+  <form id="nameForm">
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name" name="name">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    // Get the 'name' parameter from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+
+    // Display the name in the 'userName' span
+    if (name) {
+      document.getElementById('userName').textContent = name;
+    } else {
+      document.getElementById('userName').textContent = 'Guest';
+    }
+
+    // Handle form submission
+    document.getElementById('nameForm').onsubmit = function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      if (name) {
+        window.location.href = `index.html?name=${name}`; // Redirect with name as query parameter
+      }
+    };
+  </script>
+  <h1>Click on an animal to hear its sound and learn more about it!</h1>
+  <div class="animal-container">
+    <div class="animal" id="cat" onclick="playSoundAndNavigate('cat')">
+      <img src="images/black-cat.jpg" alt="Cat">
+      <p>Cat</p>
+    </div>
+    <div class="animal" id="dog" onclick="playSoundAndNavigate('dog')">
+      <img src="images/dog.jpg" alt="Dog">
+      <p>Dog</p>
+    </div>
+    <div class="animal" id="donkey" onclick="playSoundAndNavigate('donkey')">
+      <img src="images/donkey.jpg" alt="Donkey">
+      <p>Donkey</p>
+    </div>
+    <div class="animal" id="capybara" onclick="playSoundAndNavigate('capybara')">
+      <img src="images/capybara.jpg" alt="Capybara">
+      <p>Capybara</p>
+    </div>
+  </div>
+
+  <audio id="animal-sound"></audio> <!-- Single audio element for all sounds -->
+
+  <script src="script.js"></script>
+</body>
+</html>

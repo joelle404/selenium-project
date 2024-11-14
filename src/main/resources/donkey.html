@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Donkeys</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+  <h1>About Donkeys</h1>
+  <p>Donkeys are domesticated hoofed mammals that are known for their strength, endurance, and sure-footedness. They are often used as working animals in various parts of the world.</p>
+  <p>Donkeys communicate with loud brays, especially when they are looking for companionship or alerting others to their presence.</p>
+  <p>Due to their calm demeanor and resilience, donkeys have been valued as beasts of burden and are highly adaptable to different climates.</p>
+
+  <div class="animal-grid">
+    <!-- Animal images grid -->
+    <div>
+      <img src="images/donkey.jpg" alt="Donkey 1" id="donkey1" onclick="incrementCounter('donkey1')">
+    </div>
+    <div>
+      <img src="images/dog.jpg" alt="Dog" onclick="playSoundAnd('dog')">
+    </div>
+    <div>
+      <img src="images/black-cat.jpg" alt="Cat" onclick="playSoundAnd('cat')">
+    </div>
+    <div>
+      <img src="images/donkey.jpg" alt="Donkey 2" id="donkey2" onclick="incrementCounter('donkey2')">
+    </div>
+    <div>
+      <img src="images/bird.jpg" id="bird" alt="Bird" onclick="playSoundAnd('bird')">
+    </div>
+    <div>
+      <img src="images/capybara.jpg" alt="Capybara" onclick="playSoundAnd('capybara')">
+    </div>
+  </div>
+
+  <p id="counter">Donkeys clicked: 0/2</p>
+
+  <!-- Sound element for claps -->
+  <audio id="clap-sound" preload="auto">
+    <source src="sounds/clap.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="animal-sound"></audio>
+  <audio id="clap-sound"></audio>
+
+  <a href="index.html">Back to Main Page</a>
+
+</body>
+</html>

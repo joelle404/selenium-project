@@ -1,0 +1,17 @@
+<suite name="Parallel Test Suite" parallel="tests" thread-count="3">
+    <test name="parallel 1 AnimalsApplicationTests">
+        <classes>
+            <class name="com.joelle.animals.AnimalsApplicationTests"/>
+        </classes>
+    </test>
+    <test name="parallel 2 AnimalsApplicationTests">
+        <classes>
+            <class name="com.joelle.animals.AnimalsApplicationTests"/>
+        </classes>
+    </test>
+    <test name="parallel 3 AnimalsApplicationTests">
+        <classes>
+            <class name="com.joelle.animals.AnimalsApplicationTests"/>
+        </classes>
+    </test>
+</suite>
